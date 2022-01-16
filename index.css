@@ -1,0 +1,10 @@
+#div1{
+    display: block;
+    text-align: center;
+    margin-top: 12%;
+    font-family: Digital;
+    font-size: 20rem;
+    text-decoration-color:rgb(255, 2, 99);
+}
+
+@font-face { font-family: Digital; src: url('./font/digital-7.ttf'); } 

@@ -1,0 +1,36 @@
+{
+  "name": "digiclock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "packager-windows": "electron-packager . DigiClock --overwrite --asar=true --platform=win32 --arch=x64 --icon=./clock.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='DigiClock'",
+    "packager-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=./clock.icns --prune=true --out=release-builds",
+    "packager-linux": "electron-packager . DigiClock --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "keywords": [],
+  "author": "Leonard Martinis",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/publisher-github": "^6.0.0-beta.63",
+    "electron": "16.0.7",
+    "electron-packager": "^15.4.0"
+  },
+  "config": {
+    "forge": {
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "erikhofer",
+              "name": "electron-publish-example"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
