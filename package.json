@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "npm-install": "npm install",
     "packager-windows": "electron-packager . DigiClock --overwrite --asar=true --platform=win32 --arch=x64 --icon=./clock.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='DigiClock'",
     "packager-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=./clock.icns --prune=true --out=release-builds",
     "packager-linux": "electron-packager . DigiClock --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
