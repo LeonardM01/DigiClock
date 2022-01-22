@@ -8,19 +8,33 @@
     <link rel="stylesheet" href="./index.css">
     <title>DigiClock</title>
 </head>
-<body class="bg-dark">
-    <div id="div1">
-        <span class="badge badge-pill badge-succes" id="hrs1"></span>
-        <span class="badge badge-pill badge-info" id="dots">:</span>
-        <span class="badge badge-pill badge-warning" id="min1"></span>
-    </div>
+<body class="bg-dark overflow-hidden">
+    <div class="row">
+        <div class="col-xxl-11" id="div1">
+            <span class="badge badge-pill badge-succes" id="hrs1"></span>
+         <span class="badge badge-pill badge-info" id="dots">:</span>
+           <span class="badge badge-pill badge-warning" id="min1"></span>
+        </div>
+        <div class="col-sm-1" id="div2">
+           <span class="badge badge-succes" id="day"></span>
+        </div>
+    </div> 
 </body>
 <script>
    function time(){
     var time = new Date();
 
+    var day; 
     var hrs = time.getHours();
     var min = time.getMinutes();
+
+    if(hrs>12){
+        hrs = hrs-12;
+        day = "PM";
+    }
+    else{
+        day="AM";
+    }
 
     if(min<10){
         min = '0' + min;
@@ -31,6 +45,8 @@
 
     document.getElementById('hrs1').innerHTML=hrs;
     document.getElementById('min1').innerHTML=min;
+    document.getElementById('day').innerHTML=day;
+
 }
 time();
 setInterval(time, 1000);

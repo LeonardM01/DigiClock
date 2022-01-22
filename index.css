@@ -3,8 +3,17 @@
     text-align: center;
     margin-top: 12%;
     font-family: Digital;
-    font-size: 20rem;
-    text-decoration-color:rgb(255, 2, 99);
+    font-size: 15rem;
+    z-index: 1;
+}
+#div2{
+    display: block;
+    text-align: left;
+    margin-top: 25%;
+    font-family: Digital;
+    font-size: 2rem;
+    text-decoration: solid, white;
+    z-index: 1;
 }
 
 @font-face { font-family: Digital; src: url('./font/digital-7.ttf'); } 
