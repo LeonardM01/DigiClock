@@ -5,7 +5,6 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "make": "electron-forge make",
     "npm-install": "npm install",
     "packager-windows": "electron-packager . DigiClock --overwrite --asar=true --platform=win32 --arch=x64 --icon=./clock.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='DigiClock'",
     "packager-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=./clock.icns --prune=true --out=release-builds",
@@ -15,11 +14,6 @@
   "author": "Leonard Martinis",
   "license": "MIT",
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.63",
-    "@electron-forge/maker-deb": "^6.0.0-beta.63",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
-    "@electron-forge/maker-zip": "^6.0.0-beta.63",
     "@electron-forge/publisher-github": "^6.0.0-beta.63",
     "electron": "16.0.7",
     "electron-packager": "^15.4.0"
@@ -36,28 +30,6 @@
               "version": "1.1"
             }
           }
-        }
-      ],
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "DigiClock"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
         }
       ]
     }
